@@ -1,6 +1,5 @@
 import chalk from 'chalk'
 import fs from 'fs'
-import hre from 'hardhat'
 import { task } from 'hardhat/config'
 import { HardhatRuntimeEnvironment } from 'hardhat/types'
 import { Deployment } from 'hardhat-deploy/dist/types'
@@ -28,13 +27,14 @@ const publishSubgraph = async (
   const deployments = await hre.deployments.all()
   for (const contractName in deployments) {
     const deployment = deployments[contractName]
-    await writeSubgraphContract(contractName, deployment, hre.network.name)
+    await writeSubgraphContract(hre, contractName, deployment, hre.network.name)
   }
   console.log('✅  Published contracts to the subgraph package.')
 }
 
 const graphDir = '../subgraph'
 async function writeSubgraphContract(
+  hre: HardhatRuntimeEnvironment,
   contractName: string,
   deployment: Deployment,
   networkName: string

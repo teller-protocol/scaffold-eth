@@ -1,8 +1,9 @@
 import { ethers } from 'hardhat'
 import { DeployFunction } from 'hardhat-deploy/dist/types'
 
+import { deploy } from '#utils/deploy-helpers'
+
 import { YourContract } from '../types/typechain'
-import { deploy } from '../utils/deploy-helpers'
 
 const deployFn: DeployFunction = async (hre) => {
   const { contracts, getNamedAccounts, getNamedSigner } = hre

@@ -9,7 +9,13 @@
     "allowJs": false,
     "strict": true,
     "noEmit": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".utils",
+    "paths": {
+      "#utils/*": [
+        "*"
+      ]
+    },
   },
   "files": ["hardhat.config.ts"],
   "include": [
@@ -19,7 +25,7 @@
     "./tasks",
     "./test",
     "./types/custom",
-    "./utils"
+    "./.utils/**/*"
   ],
   "exclude": [
     "./artifacts",
@@ -28,6 +34,5 @@
     "./contracts",
     "./coverage",
     "./docs",
-    "./node_modules"
   ]
 }

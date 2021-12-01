@@ -4,9 +4,9 @@ import { HARDHAT_NETWORK_NAME } from 'hardhat/plugins'
 import { ActionType, HardhatRuntimeEnvironment } from 'hardhat/types'
 import * as path from 'path'
 
-import { getFunds } from '../scripts/get-funds'
+import { getFunds } from '#utils/get-funds'
 
-const projectPath = path.resolve(__dirname, '..')
+const projectPath = path.resolve(__dirname, '..', '..')
 
 interface NetworkArgs {
   chain: string
