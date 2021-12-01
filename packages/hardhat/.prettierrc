@@ -1,0 +1,26 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "semi": false,
+  "overrides": [
+    {
+      "files": "*.sol",
+      "options": {
+        "compiler": "0.8.0",
+        "tabWidth": 4,
+        "singleQuote": false,
+        "explicitTypes": "always",
+        "semi": true
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+      }
+    }
+  ]
+}

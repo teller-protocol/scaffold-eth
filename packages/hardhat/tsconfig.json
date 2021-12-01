@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "target": "ES6",
+    "allowJs": false,
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "files": ["hardhat.config.ts"],
+  "include": [
+    "./config",
+    "./deploy",
+    "./scripts",
+    "./tasks",
+    "./test",
+    "./types/custom",
+    "./utils"
+  ],
+  "exclude": [
+    "./artifacts",
+    "./build",
+    "./cache",
+    "./contracts",
+    "./coverage",
+    "./docs",
+    "./node_modules"
+  ]
+}
